@@ -1,13 +1,22 @@
-<template name="Navbar">
+<template name="navbar">
   <div class="navbar-fixed">
     <nav class="grey darken-4" role="navigation">
       <div class="nav-wrapper container"> <a id="logo-container" href="#" class="brand-logo signature">Super Secret Test App</a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#">Test</a></li>
+          <li><a class="modal-trigger signInStatus" href="#signInOutModal">Sign In</a></li>
         </ul>
         <ul id="nav-mobile" class="side-nav">
-          <li><a href="#">Test</a></li>
-        </ul> <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a> </div>
+          <li><a class="modal-trigger signInStatus" href="#signInOutModal">Sign In</a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
     </nav>
+  </div>
+
+  <!-- Sign In/Up/Out Modal -->
+  <div id="signInOutModal" class="modal">
+    <div class="modal-content">
+      {{ > signInOut }}
+    </div>
   </div>
 </template>

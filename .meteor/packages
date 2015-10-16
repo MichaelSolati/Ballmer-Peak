@@ -20,6 +20,13 @@ autopublish             # Publish all data to the clients (for prototyping)
 insecure                # Allow all DB writes from clients (for prototyping)
 iron:router
 mrt:jquery-ui
-accounts-ui
-accounts-password
 email
+useraccounts:materialize
+accounts-facebook
+accounts-google
+service-configuration
+houston:admin
+raix:handlebar-helpers
+check
+mikael:accounts-merge
+accounts-twitter

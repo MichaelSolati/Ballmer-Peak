@@ -1,8 +1,11 @@
-(function($){
-  $(function(){
-    $('.button-collapse').sideNav({
-      closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-    }
-  );
-  }); // end of document ready
-})(jQuery); // end of jQuery name space
+$(document).ready(function() {
+	$(".button-collapse").sideNav({
+		closeOnClick: true
+	});
+	$('.modal-trigger').leanModal();
+	if (Meteor.user()) {
+		$('.signInStatus').text("Sign Out");
+	} else {
+		$('.signInStatus').text("Sign In");
+	}
+});

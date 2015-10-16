@@ -1,0 +1,37 @@
+button {
+    margin-bottom: 5px;
+    width: 100%;
+}
+#merge-facebook {
+    background: #3B5998;
+    color: #fff;
+}
+#merge-facebook.disabled {
+    color: #ddd;
+    background: #666666;
+}
+#merge-facebook:hover {
+    background: #2C4780;
+}
+#merge-twitter {
+    background: #4099FF;
+    color: #fff;
+}
+#merge-twitter.disabled {
+    color: #ddd;
+    background: #666666;
+}
+#merge-twitter:hover {
+    background: #3288EB;
+}
+#merge-google {
+    background: #db5a3c;
+    color: #fff;
+}
+#merge-google.disabled {
+    color: #ddd;
+    background: #666666;
+}
+#merge-google:hover {
+    background: #CA4C2E;
+}
