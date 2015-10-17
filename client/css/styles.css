@@ -1,3 +1,14 @@
+body {
+    font-size: 14px;
+}
+.small {
+    font-size: 10.5px;
+    /* 75% of the baseline */
+}
+.large {
+    font-size: 17.5px;
+    /* 125% of the baseline */
+}
 button {
     margin-bottom: 5px;
     width: 100%;

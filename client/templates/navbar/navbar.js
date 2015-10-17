@@ -4,8 +4,18 @@ $(document).ready(function() {
 	});
 	$('.modal-trigger').leanModal();
 	if (Meteor.user()) {
-		$('.signInStatus').text("Sign Out");
+		$('.signInStatus').text("Dashboard");
 	} else {
 		$('.signInStatus').text("Sign In");
 	}
+});
+
+Template.navbar.events({
+  'click .signInStatus': function(event) {
+    if (Meteor.user()){
+        $('.signInStatus').text("Dashboard");
+    } else {
+    	$('.signInStatus').text("Sign In");
+    }
+  }
 });

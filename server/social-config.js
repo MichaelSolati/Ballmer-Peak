@@ -1,4 +1,4 @@
-// Local Host Config
+// Deployed Social Config
 // Set up login services
 Meteor.startup(function() {
   // Remove configuration entries in case service is already configured
@@ -20,14 +20,14 @@ Meteor.startup(function() {
   // Add Google configuration entry
   ServiceConfiguration.configurations.insert({
     "service": "google",
-    "clientId": "176999018351-b9llgv128o965h3pe9doi6npbdgs3j4t.apps.googleusercontent.com",
-    "secret": "tXDH0Zi_VyUC_6BDbnXWo0O_"
+    "clientId": "1054463848701-92aieqbtaflhl20o4tlaiaquaqsh8mi7.apps.googleusercontent.com",
+    "secret": "r5JQOwHSBBGoZvK6DEs94PIU"
   });
   // Add Twitter configuration entry
   ServiceConfiguration.configurations.insert({
     "service": "twitter",
-    "consumerKey": "eBqVdRWMQ85vsbfikMWOaPK0O",
-    "secret": "r0lvQcegZeOGyprTlbIkLnDSxqH2dlddz7PiFHPauDTmggudgR"
+    "consumerKey": "vWS7uLTWZiSB0IHfi25d7dMqP",
+    "secret": "OyfOy9vZoe5UglGD3HIfzLgfH1sWSrBMaXaGEUIfUX5c92ECkd"
   });
 });
 // Handle merge of application specific DB items

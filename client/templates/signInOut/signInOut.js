@@ -19,7 +19,7 @@ Template.signInOut.events({
     setTimeout(function () {
         if (Meteor.user()){
         	Materialize.toast('Signed In With Facebook!', 3000, 'rounded');
-          $('.signInStatus').text("Sign Out");
+          $('.signInStatus').text("Dashboard");
         } else {
         	Materialize.toast('There Might Be An Issue...', 3000, 'rounded');
         }
@@ -30,7 +30,7 @@ Template.signInOut.events({
     setTimeout(function () {
         if (Meteor.user()){
         	Materialize.toast('Signed In With Google!', 3000, 'rounded');
-          $('.signInStatus').text("Sign Out");
+          $('.signInStatus').text("Dashboard");
         } else {
         	Materialize.toast('There Might Be An Issue...', 3000, 'rounded');
         }
@@ -41,16 +41,12 @@ Template.signInOut.events({
     setTimeout(function () {
         if (Meteor.user()){
         	Materialize.toast('Signed In With Twitter!', 3000, 'rounded');
-          $('.signInStatus').text("Sign Out");
+          $('.signInStatus').text("Dashboard");
         } else {
         	Materialize.toast('There Might Be An Issue...', 3000, 'rounded');
         }
-    }, 5000);
-  }
-});
-
-
-Template.signInOut.events({
+    }, 8000);
+  },
 
   // Merge Facebook login service
   'click button#merge-facebook': function (e) {
