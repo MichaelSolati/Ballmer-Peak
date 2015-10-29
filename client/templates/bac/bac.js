@@ -39,7 +39,8 @@ Template.bac.events({
     }
     var BAC = (A*5.14/W*r);
     Session.set("currentBAC", (BAC+Session.get("currentBAC")));
-    Materialize.toast("Enjoy that "+Drink+"!");
+    Meteor.call("logDrink");
+    Materialize.toast("Enjoy that "+Drink+"!", 4000);
     if (Session.get("currentBAC") >= 0.129 && Session.get("currentBAC") <= 0.138){
       $("#inDaZone").text("You're In The Zone!");
     } else {
