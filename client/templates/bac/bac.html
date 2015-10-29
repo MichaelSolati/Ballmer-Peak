@@ -1,0 +1,68 @@
+<template name="bac">
+	<h2 class="center">Log A Drink</h2>
+	<h4 class="center" id="inDaZone">You're Not In The Zone!</h4>
+	<h5 class="center" id="currentBAC">0.0 (Current BAC)</h5>
+	<div class="row">
+		<form class="col s12">
+			<div class="row">
+				<div class="input-field col s12">
+					<input id="drinkName" type="text" class="validate">
+					<label for="drinkName">Drink Name</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12 m4 l4">
+					<input id="alcoholPercentage" type="number" class="validate">
+					<label for="alcoholPercentage">Alcohol Percentage</label>
+				</div>
+				<div class="input-field col s12 m4 l4">
+					<input id="volume" type="number" class="validate">
+					<label for="volume">Volume (in oz)</label>
+				</div>
+				<div class="input-field col s12 m4 l4">
+					<!-- <select>
+						<option value="" disabled selected>Choose your option</option>
+						<option value="oz">fl oz</option>
+						<option value="ml">ml</option>
+						<option value="cups">cups</option>
+					</select>
+					<label>Unit</label> -->
+
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12 m4 l4">
+					<p>
+						<input name="gender" type="radio" id="male" checked/>
+						<label for="male">Male</label>
+					</p>
+					<p>
+						<input name="gender" type="radio" id="female" />
+						<label for="female">Female</label>
+					</p>
+				</div>
+				<div class="input-field col s12 m4 l4">
+					<input id="weight" type="number" class="validate">
+					<label for="weight">Body Weight</label>
+				</div>
+				<div class="input-field col s12 m4 l4">
+					<p>
+						<input name="weightUnit" type="radio" id="lbs" checked/>
+						<label for="lbs">Pounds</label>
+					</p>
+					<p>
+						<input name="weightUnit" type="radio" id="kg" />
+						<label for="kg">Kilograms</label>
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12 offset-m4 m4 offset-l4 l4">
+					<button class="btn amber waves-effect waves-light" type="submit" name="action">Drink Up
+    <i class="fa fa-beer left"></i>
+  </button>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>

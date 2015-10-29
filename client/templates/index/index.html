@@ -1,4 +1,9 @@
 <template name="index">
+	{{ #if currentUser }}
+	{{ > bac }}
+	{{ > whatIsBalmer }}
+	{{ else }}
 	<h1 class="center">You Work Hard</h1>
 	<h4 class="center">You Should Drink To Work Better!</h4>
+	{{ /if }}
 </template>

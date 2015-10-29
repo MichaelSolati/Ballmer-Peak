@@ -46,3 +46,17 @@ button {
 #merge-google:hover {
     background: #CA4C2E;
 }
+
+
+nav ul a,
+nav .brand-logo {
+  color: #ffc107;
+}
+
+a {
+  color: #ff6f00;
+}
+
+.button-collapse {
+  color: #ffc107;
+}
