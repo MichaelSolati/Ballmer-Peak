@@ -2,8 +2,11 @@
   <div class="navbar-fixed">
     <nav class="grey darken-4" role="navigation">
       <div class="nav-wrapper container"> <a id="logo-container" href="#" class="brand-logo signature">Ballmer Peak</a>
-        <ul class="right hide-on-med-and-down">
+        <ul class="right hide-on-med-and-down">  
           <li><a class="modal-trigger signInStatus" href="#signInOutModal">Sign In</a></li>
+          {{ #if currentUser }}
+          <li>hello</li>
+          {{ /if }}
         </ul>
         <ul id="nav-mobile" class="side-nav">
           <li><a class="modal-trigger signInStatus" href="#signInOutModal">Sign In</a></li>

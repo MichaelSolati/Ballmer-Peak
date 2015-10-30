@@ -26,12 +26,12 @@ Meteor.startup(function() {
     loginStyle: "popup"
   });
   // Add Twitter configuration entry
-  // ServiceConfiguration.configurations.insert({
-  //   service: "twitter",
-  //   consumerKey: "vWS7uLTWZiSB0IHfi25d7dMqP",
-  //   secret: "OyfOy9vZoe5UglGD3HIfzLgfH1sWSrBMaXaGEUIfUX5c92ECkd",
-  //   loginStyle: "popup"
-  // });
+  ServiceConfiguration.configurations.insert({
+    service: "twitter",
+    consumerKey: "Yp99F8XiEfM1GrOJcRE5knlH7",
+    secret: "9A3Ob77LAWds0sDVHwCatnePxGL3ZcxpkmJsvq5GeKqhLAzkg1",
+    loginStyle: "popup"
+  });
 });
 // Handle merge of application specific DB items
 Meteor.methods({
