@@ -28,3 +28,5 @@ raix:handlebar-helpers
 check
 mikael:accounts-merge
 accounts-twitter
+kyroy:bugtracker
+alanning:roles

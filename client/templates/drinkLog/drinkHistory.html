@@ -13,5 +13,7 @@
 			</div>
 			{{ /each }}
 		</div>
-	</div>  
+	</div>
+
+	{{ #if currentUser }} {{else}} {{> logInCheck}} {{/if}}
 </template>

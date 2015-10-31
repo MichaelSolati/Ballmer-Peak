@@ -81,3 +81,12 @@ a {
     padding-left: 5%;
     padding-right: 5%;
 }
+
+#bugtracker-overlay-submit {
+    background: #ffc107;
+    color: #212121;
+}
+#bugtracker-overlay-cancel {
+    background: #212121;
+    color: #ffc107;
+}

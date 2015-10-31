@@ -8,7 +8,6 @@ Meteor.methods({
             'epoch': Date.now(),
             'Date' : date
         })
-        console.log("Logging Drink");
     },
     'drinkHistory': function(userID){
         var history = DrinkLog.find({user:userID}, {sort: {epoch: -1}}).fetch();

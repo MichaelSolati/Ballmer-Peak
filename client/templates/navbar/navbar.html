@@ -2,12 +2,14 @@
   <div class="navbar-fixed bottomSpace">
     <nav class="grey darken-4" role="navigation">
       <div class="nav-wrapper container"> <a id="logo-container" href="#" class="brand-logo signature">Ballmer Peak</a>
-        <ul class="right hide-on-med-and-down">  
-          
+        <ul class="right hide-on-med-and-down">
           {{ #if currentUser }}
           <li><a href="/">Log Drink</a></li>
           <li><a href="/drink-history">Drink History</a></li>
           <li><a class="modal-trigger signInStatus" href="#">Dashboard</a></li>
+          {{ #if isInRole 'admin' }}
+          <li><a href="/admin-panel">Admin Panel</a></li>
+          {{ /if }}
           {{ else }}
           <li><a class="modal-trigger signInStatus" href="#">Sign In</a></li>
           {{ /if }}
@@ -17,6 +19,9 @@
           <li><a href="/">Log Drink</a></li>
           <li><a href="/drink-history">Drink History</a></li>
           <li><a class="modal-trigger signInStatus" href="#">Dashboard</a></li>
+          {{ #if isInRole 'admin' }}
+          <li><a href="/admin-panel">Admin Panel</a></li>
+          {{ /if }}
           {{ else }}
           <li><a class="modal-trigger signInStatus" href="#">Sign In</a></li>
           {{ /if }}

@@ -1,0 +1,17 @@
+<template name="adminPanel">
+	{{ #if isInRole 'admin' }}
+	<div class="container">
+		<div class="col s12 m12 l12">
+			<div class="card">
+				<div class="container2">
+					<h4 class="center historyTitle">Welcome Admin</h4>
+					<h6 class="center"><a href="/admin">Need Houston?</a></h6>
+					{{> bugtrackerBugs}}
+				</div>
+			</div>
+		</div>
+	</div>
+	{{ else }}
+	{{ > adminCheck }}
+	{{ /if }}
+</template>

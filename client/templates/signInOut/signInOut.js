@@ -15,7 +15,7 @@ Template.signInOut.events({
         Materialize.toast('There Might Be An Issue...', 3000, 'rounded');
     } else {
     	Materialize.toast('Sucessfully Signed Out!', 3000, 'rounded');
-      $('.signInStatus').text("Sign In");
+      window.location.href = '/';
     }
     });
   },
@@ -24,7 +24,6 @@ Template.signInOut.events({
     setTimeout(function () {
         if (Meteor.user()){
         	Materialize.toast('Signed In With Facebook!', 3000, 'rounded');
-          $('.signInStatus').text("Dashboard");
         } else {
         	Materialize.toast('There Might Be An Issue...', 3000, 'rounded');
         }
@@ -35,7 +34,6 @@ Template.signInOut.events({
     setTimeout(function () {
         if (Meteor.user()){
         	Materialize.toast('Signed In With Google!', 3000, 'rounded');
-          $('.signInStatus').text("Dashboard");
         } else {
         	Materialize.toast('There Might Be An Issue...', 3000, 'rounded');
         }
@@ -46,7 +44,6 @@ Template.signInOut.events({
     setTimeout(function () {
         if (Meteor.user()){
         	Materialize.toast('Signed In With Twitter!', 3000, 'rounded');
-          $('.signInStatus').text("Dashboard");
         } else {
         	Materialize.toast('There Might Be An Issue...', 3000, 'rounded');
         }

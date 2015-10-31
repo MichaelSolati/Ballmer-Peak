@@ -4,6 +4,7 @@ accounts-google@1.0.6
 accounts-oauth@1.1.8
 accounts-password@1.1.4
 accounts-twitter@1.0.6
+alanning:roles@1.2.14
 autoupdate@1.2.4
 babel-compiler@5.8.24_1
 babel-runtime@0.1.4
@@ -50,6 +51,7 @@ iron:middleware-stack@1.0.11
 iron:router@1.0.12
 iron:url@1.0.11
 jquery@1.11.4
+kyroy:bugtracker@0.0.3
 lai:collection-extensions@0.1.4
 launch-screen@1.0.4
 livedata@1.0.15
