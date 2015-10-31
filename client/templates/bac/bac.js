@@ -3,25 +3,27 @@ if (Meteor.isClient) {
     $('select:not([multiple])').material_select();
   });
 
+
+  window.setInterval(function(){
+  Meteor.call("timeBAC");
+}, 60000);
+
   Meteor.subscribe("bac");
   Template.bac.helpers({
     bac: function() {
       Session.set("currentBAC", (BAC.findOne({user:Meteor.userID}).BAC));
-
       if (Session.get("currentBAC") >= 0.129 && Session.get("currentBAC") <= 0.138){
-      $("#inDaZone").text("You're In The Zone!");
+      $("#inDaZone").text("You're In The Zone!").css('color', '#00e676');
     } else if (Session.get("currentBAC") > 0.139) {
-      $("#inDaZone").text("You're Drunk, Cool Down...");
+      $("#inDaZone").text("You're Drunk, Cool Down...").css('color', '#d50000');
     } else if (Session.get("currentBAC") < 0.128){
-      $("#inDaZone").text("You're Not In The Zone!");
+      $("#inDaZone").text("You're Not In The Zone!").css('color', '#ff6d00');
     }
     if (Session.get("currentBAC") > 0.08){
-      $("#drivingWarning").text("In The United States You Are Over The Legal Limit. CALL A TAXI!");
+      $("#drivingWarning").text("In The United States You Are Over The Legal Limit. CALL A TAXI!").css('color', '#d50000');
     } else if (Session.get("currentBAC") < 0.08){
-      $("#drivingWarning").text("You May Be Safe To Drive...");
+      $("#drivingWarning").text("You May Be Safe To Drive...").css('color', '#000');
     }
-
-    
       return BAC.find({}).fetch();
     },
   });
