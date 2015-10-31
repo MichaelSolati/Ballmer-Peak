@@ -1,4 +1,9 @@
-// Simply 'inherites' helpers from AccountsTemplates
+if (Meteor.isClient){
+  if(Meteor.userId()){
+    Meteor.subscribe("accountsMerged");
+  }
+
+  // Simply 'inherites' helpers from AccountsTemplates
 Template.signInOut.helpers(AccountsTemplates.atFormHelpers);
 
 Template.signInOut.events({
@@ -117,3 +122,4 @@ Template.signInOut.events({
     e.preventDefault();
   }
 });
+}

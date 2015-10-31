@@ -1,0 +1,17 @@
+<template name="drinkHistory">
+	<div class="container">
+		<div class="row">
+			{{ #each drinks }}
+			<div class="col s12 m6 l4">
+				<div class="card">
+					<div class="container2">
+					<h4 class="center historyTitle">On {{this.Date}} <i class="fa fa-calendar-check-o"></i></h4>
+					<p>You enjoyed a {{this.Drink}}! It was {{this.Alcohol}}% alcohol and you had about {{this.Volume}} oz.</p>
+					<p class="center amber"><i class="fa fa-beer"></i></p>
+					</div>
+				</div>
+			</div>
+			{{ /each }}
+		</div>
+	</div>  
+</template>

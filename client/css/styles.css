@@ -1,5 +1,6 @@
 body {
     font-size: 14px;
+    background-color: #f5f5f5;
 }
 .small {
     font-size: 10.5px;
@@ -74,4 +75,9 @@ a {
 
 .button-collapse {
   color: #ffc107;
+}
+
+.container2 {
+    padding-left: 5%;
+    padding-right: 5%;
 }

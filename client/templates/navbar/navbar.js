@@ -1,4 +1,5 @@
-$(document).ready(function() {
+if (Meteor.isClient){
+  $(document).ready(function() {
 	$(".button-collapse").sideNav({
 		closeOnClick: true
 	});
@@ -21,3 +22,4 @@ Template.navbar.events({
     $('#signInOutModal').openModal()
   }
 });
+}

@@ -5,6 +5,8 @@
         <ul class="right hide-on-med-and-down">  
           
           {{ #if currentUser }}
+          <li><a href="/">Log Drink</a></li>
+          <li><a href="/drink-history">Drink History</a></li>
           <li><a class="modal-trigger signInStatus" href="#">Dashboard</a></li>
           {{ else }}
           <li><a class="modal-trigger signInStatus" href="#">Sign In</a></li>
@@ -12,6 +14,8 @@
         </ul>
         <ul id="nav-mobile" class="side-nav">
           {{ #if currentUser }}
+          <li><a href="/">Log Drink</a></li>
+          <li><a href="/drink-history">Drink History</a></li>
           <li><a class="modal-trigger signInStatus" href="#">Dashboard</a></li>
           {{ else }}
           <li><a class="modal-trigger signInStatus" href="#">Sign In</a></li>
