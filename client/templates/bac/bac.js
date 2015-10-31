@@ -1,7 +1,33 @@
-$(document).ready(function() {
+if (Meteor.isClient) {
+  $(document).ready(function() {
     $('select:not([multiple])').material_select();
   });
-  
+
+  Meteor.subscribe("bac");
+  Template.bac.helpers({
+    bac: function() {
+      Session.set("currentBAC", (BAC.findOne({user:Meteor.userID}).BAC));
+
+      if (Session.get("currentBAC") >= 0.129 && Session.get("currentBAC") <= 0.138){
+      $("#inDaZone").text("You're In The Zone!");
+    } else if (Session.get("currentBAC") > 0.139) {
+      $("#inDaZone").text("You're Drunk, Cool Down...");
+    } else if (Session.get("currentBAC") < 0.128){
+      $("#inDaZone").text("You're Not In The Zone!");
+    }
+    if (Session.get("currentBAC") > 0.08){
+      $("#drivingWarning").text("In The United States You Are Over The Legal Limit. CALL A TAXI!");
+    } else if (Session.get("currentBAC") < 0.08){
+      $("#drivingWarning").text("You May Be Safe To Drive...");
+    }
+
+    
+      return BAC.find({}).fetch();
+    },
+  });
+
+
+
 Template.bac.events({
   'submit form': function(event, template) {
     event.preventDefault();
@@ -42,16 +68,11 @@ Template.bac.events({
     var epoch = new Date();
     var date = ((epoch.getMonth()+1)+"/"+epoch.getDate()+"/"+epoch.getUTCFullYear());
 
-
-    Session.set("currentBAC", (BAC+Session.get("currentBAC")));
     Meteor.call("logDrink", Meteor.userId(), Drink, alcoholPercentage, volume, date);
+    Meteor.call("logBAC", BAC);
     Materialize.toast("Enjoy that "+Drink+"!", 4000, 'rounded');
-    if (Session.get("currentBAC") >= 0.129 && Session.get("currentBAC") <= 0.138){
-      $("#inDaZone").text("You're In The Zone!");
-    } else {
-      $("#inDaZone").text("You're Not In The Zone!");
-    }
-    $("#currentBAC").text(Session.get("currentBAC")+" (Current BAC)");
+    
 
   }
 });
+}
