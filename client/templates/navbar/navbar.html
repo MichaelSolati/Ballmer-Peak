@@ -1,15 +1,21 @@
 <template name="navbar">
-  <div class="navbar-fixed">
+  <div class="navbar-fixed bottomSpace">
     <nav class="grey darken-4" role="navigation">
       <div class="nav-wrapper container"> <a id="logo-container" href="#" class="brand-logo signature">Ballmer Peak</a>
         <ul class="right hide-on-med-and-down">  
-          <li><a class="modal-trigger signInStatus" href="#signInOutModal">Sign In</a></li>
+          
           {{ #if currentUser }}
-          <li>hello</li>
+          <li><a class="modal-trigger signInStatus" href="#">Dashboard</a></li>
+          {{ else }}
+          <li><a class="modal-trigger signInStatus" href="#">Sign In</a></li>
           {{ /if }}
         </ul>
         <ul id="nav-mobile" class="side-nav">
-          <li><a class="modal-trigger signInStatus" href="#signInOutModal">Sign In</a></li>
+          {{ #if currentUser }}
+          <li><a class="modal-trigger signInStatus" href="#">Dashboard</a></li>
+          {{ else }}
+          <li><a class="modal-trigger signInStatus" href="#">Sign In</a></li>
+          {{ /if }}
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
       </div>

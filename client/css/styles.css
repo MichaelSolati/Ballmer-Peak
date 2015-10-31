@@ -13,6 +13,21 @@ button {
     margin-bottom: 5px;
     width: 100%;
 }
+
+.bottomSpace {
+    margin-bottom: 20px;
+}
+
+.topSpace {
+    margin-top: 20px;
+}
+
+.mediumImage {
+    display:block;
+    margin:auto;
+    max-height: 200px;
+}
+
 #merge-facebook {
     background: #3B5998;
     color: #fff;
