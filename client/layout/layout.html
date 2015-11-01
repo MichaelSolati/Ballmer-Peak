@@ -6,8 +6,10 @@
 	<main>
 		{{> yield}}
 	</main>
+	{{ #if $.Session.get 'webApp' }}
 	<footer class="page-footer amber">
 		{{> footer}}
 	</footer>
+	{{ /if }}
 </body>
 </template>

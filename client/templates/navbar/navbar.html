@@ -10,6 +10,9 @@
           {{ #if isInRole 'admin' }}
           <li><a href="/admin-panel">Admin Panel</a></li>
           {{ /if }}
+          {{ #if $.Session.get 'mobileApp' }}
+          <li><a href="#">Report A Bug</a></li>
+          {{ /if }}
           {{ else }}
           <li><a class="modal-trigger signInStatus" href="#">Sign In</a></li>
           {{ /if }}
@@ -21,6 +24,9 @@
           <li><a class="modal-trigger signInStatus" href="#">Dashboard</a></li>
           {{ #if isInRole 'admin' }}
           <li><a href="/admin-panel">Admin Panel</a></li>
+          {{ /if }}
+          {{ #if $.Session.get 'mobileApp' }}
+          <li><a href="#">Report A Bug</a></li>
           {{ /if }}
           {{ else }}
           <li><a class="modal-trigger signInStatus" href="#">Sign In</a></li>

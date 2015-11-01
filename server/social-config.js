@@ -16,7 +16,7 @@ Meteor.startup(function() {
     service: "facebook",
     appId: "880217695367546",
     secret: "203ca21587b7996aea9335ac56089d88",
-    loginStyle: "popup"
+    loginStyle: "redirect"
   });
   // Add Google configuration entry
   ServiceConfiguration.configurations.insert({

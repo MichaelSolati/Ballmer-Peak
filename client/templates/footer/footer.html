@@ -1,17 +1,18 @@
 <template name="footer">
 	<div class="container">
-            <div class="row">
-              <div class="col s12 m12 l12">
-                {{ > whatIsBalmer }}
-              </div>
-            </div>
-          </div>
-          <div class="footer-copyright grey darken-4">
-            <div class="container">
-            <h6><a href="http://www.mehdisolati.com/" class="left" id="copyright">© 2015 Mehdi Solati</a>
-              <a id="bug" class="right" href="#!">Report A Bug/Make A Suggestion</a></h6>
-            </div>
-          </div>
-
-          {{> bugtrackerForm framework="materialize"}}
+    <div class="row">
+      <div class="col s12 m12 l12">
+        {{ > whatIsBalmer }}
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright grey darken-4">
+    <div class="container">
+      <h6>
+        <a id="copyright" href="http://www.michaelsolati.com/" class="left">© 2015 Michael Solati</a>
+        <a id="bug" href="#!" class="right">Report A Bug/Make A Suggestion</a>
+      </h6>
+    </div>
+  </div>
+  {{> bugtrackerForm framework="materialize"}}
 </template>
