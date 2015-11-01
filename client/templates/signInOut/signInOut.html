@@ -1,7 +1,7 @@
 <template name="signInOut">
   {{ #if currentUser }}
   <div id="userDash" class="container">
-    <h4>Hey {{currentUser.profile.name}}</h4>
+    <h4 class="center">Hey {{currentUser.profile.name}}</h4>
     {{#if currentUser.services.facebook}}
     {{else}}
     <button class="at-social-btn waves-effect waves-light btn" id="merge-facebook"><i class="fa fa-facebook left"></i> Merge Facebook</button>
