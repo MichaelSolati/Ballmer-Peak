@@ -30,4 +30,4 @@ mikael:accounts-merge
 accounts-twitter
 kyroy:bugtracker
 alanning:roles
-materialize:materialize@=0.97.0
+materialize:materialize

@@ -19,11 +19,11 @@
 								</div>
 								<div class="row">
 									<div class="input-field col s12 m4 l4">
-										<input id="alcoholPercentage" type="number" class="validate">
+										<input id="alcoholPercentage" type="number" class="validate" min="1">
 										<label for="alcoholPercentage">Alcohol Percentage</label>
 									</div>
 									<div class="input-field col s12 m4 l4">
-										<input id="volume" type="number" class="validate">
+										<input id="volume" type="number" class="validate" min="1">
 										<label for="volume">Volume (in oz)</label>
 									</div>
 									<div class="input-field col s12 m4 l4">
@@ -31,28 +31,22 @@
 								</div>
 								<div class="row">
 									<div class="input-field col s12 m4 l4">
-										<p>
-											<input name="gender" type="radio" id="male" checked/>
-											<label for="male">Male</label>
-										</p>
-										<p>
-											<input name="gender" type="radio" id="female" />
-											<label for="female">Female</label>
-										</p>
+										<select id="gender">
+											<option value="male">Male</option>
+											<option value="female">Female</option>
+										</select>
+										<label for="gender">Gender</label>
 									</div>
 									<div class="input-field col s12 m4 l4">
-										<input id="weight" type="number" class="validate">
+										<input id="weight" type="number" class="validate" min="0">
 										<label for="weight">Body Weight</label>
 									</div>
 									<div class="input-field col s12 m4 l4">
-										<p>
-											<input name="weightUnit" type="radio" id="lbs" checked/>
-											<label for="lbs">Pounds</label>
-										</p>
-										<p>
-											<input name="weightUnit" type="radio" id="kg" />
-											<label for="kg">Kilograms</label>
-										</p>
+										<select id="weightUnit">
+											<option value="lbs">Pounds</option>
+											<option value="kg">Kilograms</option>
+										</select>
+										<label for="weightUnit">Weight Unit</label>
 									</div>
 								</div>
 								<div class="row">

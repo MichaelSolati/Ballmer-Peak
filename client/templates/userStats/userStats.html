@@ -1,0 +1,51 @@
+<template name="userStats">
+	<div class="container">
+		<div class="row">
+			<div class="col s12 m12 l12">
+				<div class="card">
+					<h4 class="center">Tell Me About You...</h4>
+					<h6 class="center">If You Tell Us Now We Won't Need To Ask Everytime!</h6>
+					<div class="row">
+						<div class="container">
+							<form class="col s12" id="saveStats">
+								<div class="row">
+									<div class="input-field col s12 m4 l4">
+										<p>
+											<input name="gender" type="radio" id="sMale" checked/>
+											<label for="sMale">Male</label>
+										</p>
+										<p>
+											<input name="gender" type="radio" id="sFemale" />
+											<label for="sFemale">Female</label>
+										</p>
+									</div>
+									<div class="input-field col s12 m4 l4">
+										<input id="sWeight" type="number" class="validate">
+										<label for="sWeight">Body Weight</label>
+									</div>
+									<div class="input-field col s12 m4 l4">
+										<p>
+											<input name="weightUnit" type="radio" id="sLbs" checked/>
+											<label for="sLbs">Pounds</label>
+										</p>
+										<p>
+											<input name="weightUnit" type="radio" id="sKg" />
+											<label for="sKg">Kilograms</label>
+										</p>
+									</div>
+								</div>
+								<div class="row">
+									<div class="input-field col s12 offset-m4 m4 offset-l4 l4">
+										<button class="btn amber waves-effect waves-light" type="submit" name="action">Save
+											<i class="fa fa-save left"></i>
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
