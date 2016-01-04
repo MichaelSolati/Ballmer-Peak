@@ -1,7 +1,10 @@
 <template name="navbar">
   <div class="navbar-fixed bottomSpace">
     <nav class="grey darken-4" role="navigation">
-      <div class="nav-wrapper container"> <a id="logo-container" href="/" class="brand-logo signature">Ballmer Peak</a>
+      <div class="nav-wrapper container">
+        {{ #if $.Session.get 'webApp' }}
+        <a id="logo-container" href="/" class="brand-logo signature">Ballmer Peak</a>
+        {{ /if }}
         <ul class="right hide-on-med-and-down">
           {{ #if currentUser }}
           <li><a href="/">Log Drink</a></li>
@@ -46,13 +49,13 @@
 
 
   <!-- Dropdown Structure -->
-  
+
 
   <script>
-    $(document).ready(function() {
-      // Activate the side menu 
-      $(".button-collapse").sideNav({closeOnClick: true});
-      $(".dropdown-button").dropdown();
-    });
+  $(document).ready(function() {
+    // Activate the side menu
+    $(".button-collapse").sideNav({closeOnClick: true});
+    $(".dropdown-button").dropdown();
+  });
   </script>
 </template>
